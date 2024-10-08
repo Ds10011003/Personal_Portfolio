@@ -41,7 +41,6 @@ section{
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
-.projects .proj-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -259,48 +258,65 @@ section .title::after{
 }
 
 /* services section styling */
-.services{
-    color:#fff;
+.services {
+    color: #fff;
     background: #111;
 }
-.services.title::before{
+
+.services .title::before {
     background: #fff;
 }
-.services .title::after{
+
+.services .title::after {
     background: #111;
-    content: "what i provide";
+    content: "what i provide"; 
 }
-.services .serv-content .card{
+
+.services .serv-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.services .serv-content .card {
     width: calc(33% - 20px);
     background: #222;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
     cursor: pointer;
+    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover{
+
+.services .serv-content .card:hover {
     background: crimson;
 }
-.services .serv-content .card .box{
+
+.services .serv-content .card .box {
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+
+.services .serv-content .card:hover .box {
     transform: scale(1.05);
 }
-.services .serv-content .card i{
+
+.services .serv-content .card i {
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i{
+
+.services .serv-content .card:hover i {
     color: #fff;
 }
-.services .serv-content .card .text{
+
+.services .serv-content .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
 
 /* skills section styling */
 
@@ -391,6 +407,11 @@ section .title::after{
     background: #111;
     content: "what i created";
 }
+.projects .proj-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
 
 .projects .proj-content .card {
     width: calc(33% - 20px);
@@ -399,6 +420,7 @@ section .title::after{
     border-radius: 6px;
     padding: 50px 25px;
     cursor: pointer;
+    margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
@@ -470,6 +492,7 @@ section .title::after{
 }
 .contact .title::after{
     content: "get in touch";
+    background:#b3b3b3;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -685,6 +708,8 @@ footer p {
     .about .about-content .right{
         flex: 100%;
     }
+
+    .projects .proj-content .card,
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
@@ -709,6 +734,7 @@ footer p {
     .home .home-content a{
         font-size: 20px;
     }
+    .projects .proj-content .card,
     .services .serv-content .card{
         width: 100%;
     }
