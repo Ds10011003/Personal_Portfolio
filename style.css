@@ -35,12 +35,13 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .projects, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
+.projects .proj-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -258,16 +259,14 @@ section .title::after{
 }
 
 /* services section styling */
-.services, .teams{
+.services{
     color:#fff;
     background: #111;
 }
-.services .title::before,
-.teams .title::before{
+.services.title::before{
     background: #fff;
 }
-.services .title::after,
-.teams .title::after{
+.services .title::after{
     background: #111;
     content: "what i provide";
 }
@@ -377,6 +376,93 @@ section .title::after{
 .skills-content .right .mysql::before{
     width: 80%;
 }
+
+ /* project section styling */
+.projects {
+    color: #fff;
+    background: #111;
+}
+
+.projects .title::before {
+    background: #fff;
+}
+
+.projects .title::after {
+    background: #111;
+    content: "what i created";
+}
+
+.projects .proj-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.projects .proj-content .card:hover {
+    background: crimson;
+}
+
+.projects .proj-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.projects .proj-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.projects .proj-content .card i {
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+
+.projects .proj-content .card:hover i {
+    color: #fff;
+}
+
+.projects .proj-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.project-info {
+    margin-bottom: 20px; 
+    text-align: center;   
+}
+
+.project-info p {
+    font-size: 20px;      
+    color: #fff;          
+    font-weight: 400;     
+    position: relative;   
+}
+
+.project-info p a {
+    color: crimson;       
+    text-decoration: none; 
+    font-weight: bold;    
+}
+
+.project-info p a:hover {
+    text-decoration: underline; 
+}
+
+.project-info p::before {
+    content: '';
+    position: absolute;
+    width: 50%;           
+    height: 2px;         
+    background: crimson; 
+    top: 50%;            
+    left: 25%;           
+    z-index: -1;         
+}
+
+
 /* contact section styling */
 
 .contact{
@@ -477,19 +563,59 @@ section .title::after{
   background: none;
 }
 /* footer section styling */
-footer{
+footer {
     background: #111;
-    padding: 15px 23px;
+    padding: 20px;
     color: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-footer span a{
+
+footer a {
     color: crimson;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
-footer span a:hover{
+
+footer a:hover {
     text-decoration: underline;
+    color: #fff;
 }
+
+footer .socials {
+    margin-top: 15px;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .socials a:hover {
+    transform: scale(1.2);
+    color: crimson;
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    footer p {
+        font-size: 14px;
+    }
+    footer .socials a {
+        font-size: 18px;
+        margin: 0 8px;
+    }
+}
+
 
 
 /* responsive media query start */
