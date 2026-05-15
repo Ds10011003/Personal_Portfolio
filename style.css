@@ -221,17 +221,16 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-  /* Set a specific small width */
-    width: 300px; 
+ width: 280px; 
     
-    /* Set a slightly larger height to make it a portrait rectangle */
-    height: 380px; 
+    /* Reduced height to match the text height better */
+    height: 350px; 
     
-    /* This prevents "squeezing" or "stretching" */
+    /* 'Cover' keeps your face proportions perfect */
     object-fit: cover; 
     
-    /* This ensures your head stays in the frame */
-    object-position: 50% 0%; 
+    /* 'Top' ensures your head isn't cut off */
+    object-position: top; 
     
     border-radius: 6px;
 }
