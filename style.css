@@ -221,9 +221,11 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-   width: 100%;       /* Fills the column width */
-    max-width: 500px;  /* Limits how big it gets */
-    height: auto;      /* Keeps your original photo proportions */
+   width: 100%;
+    max-width: 400px;     /* Limits the width on big screens */
+    aspect-ratio: 3 / 4;  /* Automatically calculates height to stay tall/narrow */
+    object-fit: cover;
+    object-position: top;
     border-radius: 6px;
 }
 .about .about-content .right{
