@@ -221,11 +221,18 @@ section .title::after{
     width: 45%;
 }
 .about .about-content .left img{
-   width: 100%;
-    max-width: 400px;     /* Limits the width on big screens */
-    aspect-ratio: 3 / 4;  /* Automatically calculates height to stay tall/narrow */
-    object-fit: cover;
-    object-position: top;
+  /* Set a specific small width */
+    width: 300px; 
+    
+    /* Set a slightly larger height to make it a portrait rectangle */
+    height: 380px; 
+    
+    /* This prevents "squeezing" or "stretching" */
+    object-fit: cover; 
+    
+    /* This ensures your head stays in the frame */
+    object-position: 50% 0%; 
+    
     border-radius: 6px;
 }
 .about .about-content .right{
